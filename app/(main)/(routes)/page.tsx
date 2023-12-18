@@ -1,13 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { UserButton } from "@clerk/nextjs";
 
-export default function Home() {
-  const status = true;
+const Home = () => {
   return (
     <div>
-      <p className="text-3xl font-bold text-indigo-500"> Hello World</p>
-
-      <Button className={cn("bg-indigo-500", status && "bg-red-500")}>Click Me!</Button>
+      <UserButton afterSignOutUrl="/" />
     </div>
   );
-}
+};
+
+export default Home;
